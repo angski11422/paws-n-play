@@ -3,7 +3,7 @@
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { Switch } from "@nextui-org/react";
-import { UilSun, UilMoon } from "@iconscout/react-unicons/index";
+import { Sun, Moon } from "@phosphor-icons/react";
 
 export default function Toggle() {
   const [mounted, setMounted] = useState(false);
@@ -15,18 +15,10 @@ export default function Toggle() {
 
   if (!mounted) return null;
 
-  
   return (
-    
-      <Switch
-        onChange={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-        thumbIcon={({ isSelected, className }) =>
-          isSelected ? (
-            <UilMoon className={className} />
-          ) : (
-            <UilSun className={className} />
-          )
-        }
-      />
+    <Switch
+      onChange={() => setTheme(theme === "dark" ? "light" : "dark")}
+      thumbIcon={({ isSelected }) => (isSelected ? <Moon /> : <Sun />)}
+    />
   );
 }
