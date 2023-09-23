@@ -18,7 +18,13 @@ export default function Toggle() {
   return (
     <Switch
       onChange={() => setTheme(theme === "dark" ? "light" : "dark")}
-      thumbIcon={({ isSelected }) => (isSelected ? <Moon /> : <Sun />)}
+      thumbIcon={({ isSelected }) =>
+        isSelected ? (
+          <Moon className="text-slate-950" />
+        ) : (
+          <Sun className="text-slate-950" />
+        )
+      }
     />
   );
 }
