@@ -17,6 +17,7 @@ export default function Toggle() {
 
   return (
     <Switch
+      color="default"
       onChange={() => setTheme(theme === "dark" ? "light" : "dark")}
       thumbIcon={({ isSelected }) =>
         isSelected ? (

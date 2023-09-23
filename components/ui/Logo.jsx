@@ -3,5 +3,5 @@
 import { PawPrint } from "@phosphor-icons/react";
 
 export default function Logo() {
-  return <PawPrint />;
+  return <PawPrint size={32} />;
 }

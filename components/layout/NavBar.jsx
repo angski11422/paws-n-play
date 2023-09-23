@@ -12,19 +12,24 @@ export default function NavBar() {
   return (
     <Navbar maxWidth="full">
       <NavbarBrand>
-        <Logo />
-        <h1>Paws &#38; Play Pet Care </h1>
+        <Link className="flex space-x-2" href="/">
+          <Logo />
+          <h4 className="text-2xl">Paws &#38; Play Pet Care </h4>
+        </Link>
       </NavbarBrand>
-      <NavbarContent justify="center">
+      <NavbarContent justify="center" className="font-medium">
         <NavbarItem>
           <Link href="/about">About Me</Link>
         </NavbarItem>
+        <p>&#183;</p>
         <NavbarItem>
           <Link href="/pricing">Pricing</Link>
         </NavbarItem>
+        <p>&#183;</p>
         <NavbarItem>
-          <Link href="/">Book Now</Link>
+          <Link href="/booking">Book Now</Link>
         </NavbarItem>
+        <p>&#183;</p>
         <NavbarItem>
           <Link href="/contact">Request Meet & Greet</Link>
         </NavbarItem>
